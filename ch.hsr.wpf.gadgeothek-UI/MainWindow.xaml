@@ -4,9 +4,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ch.hsr.wpf.gadgeothek_UI"
+        xmlns:views="clr-namespace:ch.hsr.wpf.gadgeothek_UI.views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gadgeothek Administration" 
+        Background="#0065A3"          
+        Foreground="White"
+        Height="650" 
+        Width="950">
+    <Window.Resources>
+        <ResourceDictionary Source="/styles/TabItem.xaml" />
+    </Window.Resources>
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TabControl x:Name="NavigationTabs"
+                        TabStripPlacement="Left">
+
+                <TabItem Header="Gadgets">
+                    <views:GadgetsListView x:Name="GadgetsListView" />
+                </TabItem>
+
+                <TabItem Header="Kunden">
+                    <views:ClientsListView x:Name="ClientsListView" />
+                </TabItem>
+
+                <TabItem Header="Ausleihvorgänge">
+                    <views:LoansListView x:Name="LoansListView" />
+                </TabItem>
+            </TabControl>
+        </StackPanel>
     </Grid>
 </Window>

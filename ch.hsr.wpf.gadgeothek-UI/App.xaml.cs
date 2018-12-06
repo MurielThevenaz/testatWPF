@@ -13,5 +13,10 @@ namespace ch.hsr.wpf.gadgeothek_UI
     /// </summary>
     public partial class App : Application
     {
+        private void App_OnStartup(object sender, StartupEventArgs e)
+        {
+            var screen = new SplashScreen("media/start.png");
+            screen.Show(true);
+        }
     }
 }

@@ -28,18 +28,5 @@ namespace ch.hsr.wpf.gadgeothek_UI.views
             GadgetsListViewModel = new GadgetsListViewModel();
             DataContext = GadgetsListViewModel;
         }
-
-        private void ButtonAddNewGadget_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonDeleteGadget_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void MouseDoubleClickHandler(object sender, MouseButtonEventArgs e)
-        {
-        }
     }
 }

@@ -15,22 +15,20 @@
         <ResourceDictionary Source="/views/styles/TabItemStyle.xaml"/>
     </Window.Resources>
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TabControl x:Name="NavigationTabs"
-                        TabStripPlacement="Left">
+        <TabControl x:Name="NavigationTabs"
+                    TabStripPlacement="Left"
+                    Margin="50, 50">
+            <TabItem Header="Gadgets">
+                <views:GadgetsListView x:Name="GadgetsListView" />
+            </TabItem>
 
-                <TabItem Header="Gadgets">
-                    <views:GadgetsListView x:Name="GadgetsListView" />
-                </TabItem>
+            <TabItem Header="Kunden">
+                <views:ClientsListView x:Name="ClientsListView" />
+            </TabItem>
 
-                <TabItem Header="Kunden">
-                    <views:ClientsListView x:Name="ClientsListView" />
-                </TabItem>
-
-                <TabItem Header="Ausleihvorgänge">
-                    <views:LoansListView x:Name="LoansListView" />
-                </TabItem>
-            </TabControl>
-        </StackPanel>
+            <TabItem Header="Ausleihvorgänge">
+                <views:LoansListView x:Name="LoansListView" />
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

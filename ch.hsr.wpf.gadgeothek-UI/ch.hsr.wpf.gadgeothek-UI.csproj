@@ -73,6 +73,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="services\AppService.cs" />
+    <Compile Include="services\RelayCommand.cs" />
     <Compile Include="viewmodels\ClientsListViewModel.cs" />
     <Compile Include="viewmodels\GadgetsListViewModel.cs" />
     <Compile Include="viewmodels\LoansListViewModel.cs" />

@@ -28,18 +28,5 @@ namespace ch.hsr.wpf.gadgeothek_UI.views
             ClientsListViewModel = new ClientsListViewModel();
             DataContext = ClientsListViewModel;
         }
-
-        private void ButtonAddNewClient_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonDeleteClient_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void MouseDoubleClickHandler(object sender, MouseButtonEventArgs e)
-        {
-        }
     }
 }

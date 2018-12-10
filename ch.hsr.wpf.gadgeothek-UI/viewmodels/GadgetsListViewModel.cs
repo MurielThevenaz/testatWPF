@@ -14,6 +14,9 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         public AppService AppService;
         public ObservableCollection<Gadget> AllGadgets { get; set; } = new ObservableCollection<Gadget>();
 
+        public RelayCommand AddNewGadgetCommand { get; set; }
+        public RelayCommand DeleteGadgetCommand { get; set; }
+
         public GadgetsListViewModel() { }
 
         public void PullAllGadgets()

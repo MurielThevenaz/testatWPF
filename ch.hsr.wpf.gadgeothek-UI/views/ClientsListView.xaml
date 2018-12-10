@@ -16,16 +16,19 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <StackPanel>
-            <Button Click="ButtonAddNewClient_Click" Content="Neuer Kunde" />
-            <Button Click="ButtonDeleteClient_Click" Content="Kunde löschen" />
-            <DataGrid x:Name="dataGridView"
+        <DataGrid x:Name="dataGridView"
                       ItemsSource="{Binding AllClients}"
                       ScrollViewer.CanContentScroll="True" 
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       HorizontalContentAlignment="Stretch"
                       IsReadOnly="True" 
-                      SelectionMode="Single"
-                      MouseDoubleClick="MouseDoubleClickHandler"/>
+                      SelectionMode="Single"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Neuer Kunde" 
+                    Command="{Binding AddNewClientCommand}"/>
+            <Button Content="Kunde löschen" 
+                    Command="{Binding DeleteClientCommand}"/>
         </StackPanel>
+    </StackPanel>
 </UserControl>

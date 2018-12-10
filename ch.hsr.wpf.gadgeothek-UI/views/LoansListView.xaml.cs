@@ -28,17 +28,5 @@ namespace ch.hsr.wpf.gadgeothek_UI.views
             LoansListViewModel = new LoansListViewModel();
             DataContext = LoansListViewModel;
         }
-        private void ButtonAddNewLoan_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonEndLoan_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void MouseDoubleClickHandler(object sender, MouseButtonEventArgs e)
-        {
-        }
     }
 }

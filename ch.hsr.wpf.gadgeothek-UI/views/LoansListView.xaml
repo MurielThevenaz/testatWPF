@@ -16,8 +16,6 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <StackPanel>
-        <Button Click="ButtonAddNewLoan_Click" Content="Neuer Ausleihvorgang" />
-        <Button Click="ButtonEndLoan_Click" Content="Ausleihvorgang beenden" />
         <DataGrid x:Name="dataGridView"
                       ItemsSource="{Binding AllLoans}"
                       ScrollViewer.CanContentScroll="True" 
@@ -25,7 +23,10 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       HorizontalContentAlignment="Stretch"
                       IsReadOnly="True" 
-                      SelectionMode="Single"
-                      MouseDoubleClick="MouseDoubleClickHandler"/>
+                      SelectionMode="Single"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Neuer Ausleihvorgang" Command="{Binding AddNewLoanCommand}"/>
+            <Button Content="Ausleihvorgang beenden" Command="{Binding EndLoanCommand}" />
+        </StackPanel>
     </StackPanel>
 </UserControl>

@@ -14,6 +14,9 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         public AppService AppService;
         public ObservableCollection<Loan> AllLoans { get; set; } = new ObservableCollection<Loan>();
 
+        public RelayCommand AddNewLoanCommand { get; set; }
+        public RelayCommand EndLoanCommand { get; set; }
+
         public LoansListViewModel()
         {
         }

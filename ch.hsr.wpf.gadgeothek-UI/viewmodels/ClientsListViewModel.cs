@@ -14,6 +14,9 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         public AppService AppService;
         public ObservableCollection<Customer> AllClients { get; set; } = new ObservableCollection<Customer>();
 
+        public RelayCommand AddNewClientCommand { get; set; }
+        public RelayCommand DeleteClientCommand { get; set; }
+
         public ClientsListViewModel() { }
 
         public void PullAllClients()

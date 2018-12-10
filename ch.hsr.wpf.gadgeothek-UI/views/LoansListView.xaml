@@ -7,7 +7,25 @@
         mc:Ignorable="d"
         Height="450" 
         Width="800">
-    <Grid>
-        
-    </Grid>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/views/styles/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="/views/styles/DataGridStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel>
+        <Button Click="ButtonAddNewLoan_Click" Content="Neuer Ausleihvorgang" />
+        <Button Click="ButtonEndLoan_Click" Content="Ausleihvorgang beenden" />
+        <DataGrid x:Name="dataGridView"
+                      ItemsSource="{Binding AllLoans}"
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      HorizontalContentAlignment="Stretch"
+                      IsReadOnly="True" 
+                      SelectionMode="Single"
+                      MouseDoubleClick="MouseDoubleClickHandler"/>
+    </StackPanel>
 </UserControl>

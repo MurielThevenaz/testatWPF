@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ch.hsr.wpf.gadgeothek_UI.viewmodels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,25 @@ namespace ch.hsr.wpf.gadgeothek_UI.views
     /// </summary>
     public partial class LoansListView :UserControl
     {
+        public LoansListViewModel LoansListViewModel;
+
         public LoansListView()
         {
             InitializeComponent();
+            LoansListViewModel = new LoansListViewModel();
+            DataContext = LoansListViewModel;
+        }
+        private void ButtonAddNewLoan_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonEndLoan_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void MouseDoubleClickHandler(object sender, MouseButtonEventArgs e)
+        {
         }
     }
 }

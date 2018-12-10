@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ch.hsr.wpf.gadgeothek_UI.viewmodels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,26 @@ namespace ch.hsr.wpf.gadgeothek_UI.views
     /// </summary>
     public partial class GadgetsListView : UserControl
     {
+        public GadgetsListViewModel GadgetsListViewModel;
+
         public GadgetsListView()
         {
             InitializeComponent();
+            GadgetsListViewModel = new GadgetsListViewModel();
+            DataContext = GadgetsListViewModel;
+        }
+
+        private void ButtonAddNewGadget_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDeleteGadget_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void MouseDoubleClickHandler(object sender, MouseButtonEventArgs e)
+        {
         }
     }
 }

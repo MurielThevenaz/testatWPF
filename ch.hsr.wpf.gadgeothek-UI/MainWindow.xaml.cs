@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ch.hsr.wpf.gadgeothek_UI.services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,24 @@ namespace ch.hsr.wpf.gadgeothek_UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private AppService AppService = new AppService();
+
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = AppService;
+
+            AppService.GadgetsListViewModel = GadgetsListView.GadgetsListViewModel;
+            GadgetsListView.GadgetsListViewModel.AppService = AppService;
+            GadgetsListView.GadgetsListViewModel.PullAllGadgets();
+
+            AppService.LoansListViewModel = LoansListView.LoansListViewModel;
+            LoansListView.LoansListViewModel.AppService = AppService;
+            LoansListView.LoansListViewModel.PullAllLoans();
+
+            AppService.ClientsListViewModel = ClientsListView.ClientsListViewModel;
+            ClientsListView.ClientsListViewModel.AppService = AppService;
+            ClientsListView.ClientsListViewModel.PullAllClients();
         }
     }
 }

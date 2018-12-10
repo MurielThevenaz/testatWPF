@@ -15,7 +15,7 @@ namespace ch.hsr.wpf.gadgeothek_UI
     {
         private void App_OnStartup(object sender, StartupEventArgs e)
         {
-            var screen = new SplashScreen("media/start.png");
+            var screen = new SplashScreen("resources/start.png");
             screen.Show(true);
         }
     }

@@ -12,7 +12,7 @@
         Height="650" 
         Width="950">
     <Window.Resources>
-        <ResourceDictionary Source="/styles/TabItem.xaml" />
+        <ResourceDictionary Source="/views/styles/TabItem.xaml" />
     </Window.Resources>
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">

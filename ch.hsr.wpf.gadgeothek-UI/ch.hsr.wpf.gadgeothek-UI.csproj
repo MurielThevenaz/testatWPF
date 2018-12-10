@@ -75,7 +75,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="styles\TabItem.xaml">
+    <Page Include="views\styles\TabItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,7 +119,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="media\start.png" />
+    <Resource Include="resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="converters\" />
+    <Folder Include="helpers\" />
+    <Folder Include="viewmodels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

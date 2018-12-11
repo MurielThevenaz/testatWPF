@@ -26,6 +26,7 @@
                       SelectionMode="Single"/>
         <StackPanel Orientation="Horizontal">
             <Button Content="Neuer Ausleihvorgang" Command="{Binding AddNewLoanCommand}"/>
+            <Button Content="Ausleihvorgang anpassen" Command="{Binding ChangeLoanCommand}"/>
             <Button Content="Ausleihvorgang beenden" Command="{Binding EndLoanCommand}" />
         </StackPanel>
     </StackPanel>

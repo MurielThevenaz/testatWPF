@@ -27,6 +27,8 @@
         <StackPanel Orientation="Horizontal">
             <Button Content="Neuer Kunde" 
                     Command="{Binding AddNewClientCommand}"/>
+            <Button Content="Kunde bearbeiten" 
+                    Command="{Binding ChangeClientCommand}"/>
             <Button Content="Kunde löschen" 
                     Command="{Binding DeleteClientCommand}"/>
         </StackPanel>

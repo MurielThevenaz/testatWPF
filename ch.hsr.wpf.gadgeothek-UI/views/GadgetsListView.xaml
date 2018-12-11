@@ -27,6 +27,8 @@
         <StackPanel Orientation="Horizontal">
             <Button Content="Neues Gadget"
                     Command="{Binding AddNewGadgetCommand}"/>
+            <Button Content="Gadget bearbeiten"
+                    Command="{Binding ChangeGadgetCommand}"/>
             <Button Content="Gadget löschen" 
                     Command="{Binding DeleteGadgetCommand}"/>
         </StackPanel>

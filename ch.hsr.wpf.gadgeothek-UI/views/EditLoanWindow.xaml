@@ -1,0 +1,43 @@
+﻿<Window x:Class="ch.hsr.wpf.gadgeothek_UI.views.EditLoanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:domain="clr-namespace:ch.hsr.wpf.gadgeothek.domain;assembly=ch.hsr.wpf.gadgeothek"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:ch.hsr.wpf.gadgeothek_UI.views"
+        mc:Ignorable="d" 
+        Title="Ausleihvorgang"
+        SizeToContent="WidthAndHeight" 
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/views/styles/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="/views/styles/EditEntryStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <StackPanel>
+        <DockPanel>
+            <Label Content="Kunde" />
+            <TextBox Name="Customer" Text="{Binding Customer}" />
+        </DockPanel>
+        <DockPanel>
+            <Label Content="Gadget" />
+            <TextBox Name="Gadget" Text="{Binding Gadget}" />
+        </DockPanel>
+        <DockPanel>
+            <Label Content="Abholdatum" />
+            <TextBox Name="PickupDate" Text="{Binding PickupDate}" />
+        </DockPanel>
+        <DockPanel>
+            <Label Content="Bis zum" />
+            <TextBox Name="ReturnDate" Text="{Binding ReturnDate}" />
+        </DockPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Save"/>
+            <Button Content="Cancel"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

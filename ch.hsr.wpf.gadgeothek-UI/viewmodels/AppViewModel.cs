@@ -23,5 +23,15 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         public List<Gadget> GetAllGadgets() => Service.GetAllGadgets();
         public List<Loan> GetAllLoans() => Service.GetAllLoans();
         public List<Customer> GetAllClients() => Service.GetAllCustomers();
+
+        public bool AddGadget(Gadget gadget)
+        {
+            return Service.AddGadget(gadget);
+        }
+
+        public bool AddClient(Customer client)
+        {
+           return Service.AddCustomer(client);
+        }
     }
 }

@@ -56,7 +56,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
             EditGadgetWindow EditGadgetWindow = new EditGadgetWindow(gadget);
             if (EditGadgetWindow.ShowDialog() == true)
             {
-                if (AppViewModel.Service.AddGadget(gadget))
+                if (AppViewModel.AddGadget(gadget))
                 {
                     OnPropertyChanged(nameof(AllGadgets));
                     PullAllGadgets();

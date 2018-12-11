@@ -1,18 +1,20 @@
 ﻿using ch.hsr.wpf.gadgeothek.domain;
 using ch.hsr.wpf.gadgeothek.service;
 using System;
-using System.Configuration;
 using System.Collections.Generic;
-using ch.hsr.wpf.gadgeothek_UI.viewmodels;
+using System.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ch.hsr.wpf.gadgeothek_UI.services
+namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
 {
-    public class AppService
+    public class AppViewModel
     {
         public String ServerUrl { get; set; }
         public LibraryAdminService Service { get; set; }
 
-        public AppService()
+        public AppViewModel()
         {
             ServerUrl = ConfigurationManager.AppSettings["server"].ToString();
             Service = new LibraryAdminService(ServerUrl);

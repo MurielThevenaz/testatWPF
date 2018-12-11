@@ -12,7 +12,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
 {
     public class LoansListViewModel: INotifyPropertyChanged
     {
-        public AppService AppService;
+        public AppViewModel AppViewModel;
 
         private ObservableCollection<Loan> _allLoans = new ObservableCollection<Loan>();
         public ObservableCollection<Loan> AllLoans
@@ -44,7 +44,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         public void PullAllLoans()
         {
             AllLoans.Clear();
-            foreach (var loan in AppService.GetAllLoans())
+            foreach (var loan in AppViewModel.GetAllLoans())
             {
                 AllLoans.Add(loan);
             }

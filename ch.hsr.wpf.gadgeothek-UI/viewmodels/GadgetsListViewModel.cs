@@ -12,7 +12,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
 {
     public class GadgetsListViewModel: INotifyPropertyChanged
     {
-        public AppService AppService;
+        public AppViewModel AppViewModel;
 
         private ObservableCollection<Gadget> _allGadgets = new ObservableCollection<Gadget>();
         public ObservableCollection<Gadget> AllGadgets
@@ -44,7 +44,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         public void PullAllGadgets()
         {
             AllGadgets.Clear();
-            foreach (var gadget in AppService.GetAllGadgets())
+            foreach (var gadget in AppViewModel.GetAllGadgets())
             {
                 AllGadgets.Add(gadget);
             }
@@ -56,7 +56,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
             EditGadgetWindow EditGadgetWindow = new EditGadgetWindow(gadget);
             if (EditGadgetWindow.ShowDialog() == true)
             {
-                if (AppService.Service.AddGadget(gadget))
+                if (AppViewModel.Service.AddGadget(gadget))
                 {
                     OnPropertyChanged(nameof(AllGadgets));
                     PullAllGadgets();

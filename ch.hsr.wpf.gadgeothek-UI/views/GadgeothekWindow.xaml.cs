@@ -1,5 +1,4 @@
-﻿using ch.hsr.wpf.gadgeothek_UI.services;
-using ch.hsr.wpf.gadgeothek_UI.viewmodels;
+﻿using ch.hsr.wpf.gadgeothek_UI.viewmodels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,21 +11,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ch.hsr.wpf.gadgeothek_UI
+namespace ch.hsr.wpf.gadgeothek_UI.views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GadgeothekWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GadgeothekWindow : Window
     {
-        private AppViewModel AppViewModel = new AppViewModel();
+        public AppViewModel AppViewModel { get; set; }
 
-        public MainWindow()
+        public GadgeothekWindow()
         {
             InitializeComponent();
+            AppViewModel = new AppViewModel();
             DataContext = AppViewModel;
 
             GadgetsListView.GadgetsListViewModel.AppViewModel = AppViewModel;

@@ -12,7 +12,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
 {
     public class ClientsListViewModel: INotifyPropertyChanged
     {
-        public AppService AppService;
+        public AppViewModel AppViewModel;
 
         private ObservableCollection<Customer> _allClients = new ObservableCollection<Customer>();
         public ObservableCollection<Customer> AllClients
@@ -41,7 +41,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         public void PullAllClients()
         {
             AllClients.Clear();
-            foreach (var client in AppService.GetAllClients())
+            foreach (var client in AppViewModel.GetAllClients())
             {
                 AllClients.Add(client);
             }

@@ -25,5 +25,15 @@ namespace ch.hsr.wpf.gadgeothek_UI.views
             InitializeComponent();
             DataContext = client;
         }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            if (Name.Text == string.Empty || Password.Text == string.Empty || Email.Text == string.Empty)
+            {
+                MessageBox.Show("Füllen Sie bitte alle Felder");
+                return;
+            }
+            DialogResult = true;
+        }
     }
 }

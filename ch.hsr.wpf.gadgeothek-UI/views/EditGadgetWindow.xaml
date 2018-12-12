@@ -26,7 +26,7 @@
     </Window.Resources>
     <StackPanel>
         <DockPanel>
-            <Label Content="Inventory Nr" />
+            <Label Content="Inventar-Nr" />
             <TextBox Name="ID" Text="{Binding InventoryNumber}" />
         </DockPanel>
         <DockPanel>
@@ -34,23 +34,23 @@
             <TextBox Name="Name" Text="{Binding Name}" />
         </DockPanel>
         <DockPanel>
-            <Label Content="Manufacturer" />
+            <Label Content="Marke" />
             <TextBox Name="Manufacturer" Text="{Binding Manufacturer}" />
         </DockPanel>
         <DockPanel>
-            <Label Content="Price" />
+            <Label Content="Preis" />
             <TextBox Name="Price" Text="{Binding Price}" />
         </DockPanel>
         <DockPanel>
-            <Label Content="Condition" />
+            <Label Content="Zustand" />
             <ComboBox Name="Condition" 
                       ItemsSource="{Binding Source={StaticResource dataFromEnum}}"
                       SelectedItem="{Binding Condition}">
             </ComboBox>
         </DockPanel>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Save"/>
-            <Button Content="Cancel"/>
+            <Button Content="Save" Click="ButtonSave_Click"/>
+            <Button Content="Cancel" IsCancel="True"/>
         </StackPanel>
     </StackPanel>
 </Window>

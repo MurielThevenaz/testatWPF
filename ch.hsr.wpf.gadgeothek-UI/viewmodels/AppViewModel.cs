@@ -11,13 +11,11 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
 {
     public class AppViewModel
     {
-        public String ServerUrl { get; set; }
-        public LibraryAdminService Service { get; set; }
+        private LibraryAdminService Service;
 
-        public AppViewModel()
+        public AppViewModel(LibraryAdminService Service)
         {
-            ServerUrl = ConfigurationManager.AppSettings["server"].ToString();
-            Service = new LibraryAdminService(ServerUrl);
+            this.Service = Service;
         }
 
         public List<Gadget> GetAllGadgets() => Service.GetAllGadgets();
@@ -29,9 +27,29 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
             return Service.AddGadget(gadget);
         }
 
+        public bool UpdateGadget(Gadget gadget)
+        {
+            return Service.UpdateGadget(gadget);
+        }
+
+        public bool DeleteGadget(Gadget gadget)
+        {
+            return Service.DeleteGadget(gadget);
+        }
+
         public bool AddClient(Customer client)
         {
            return Service.AddCustomer(client);
+        }
+
+        public bool UpdateClient(Customer client)
+        {
+            return Service.UpdateCustomer(client);
+        }
+
+        public bool DeleteClient(Customer client)
+        {
+            return Service.DeleteCustomer(client);
         }
     }
 }

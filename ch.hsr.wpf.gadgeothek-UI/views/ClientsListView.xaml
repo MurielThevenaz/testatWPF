@@ -28,9 +28,11 @@
             <Button Content="Neuer Kunde" 
                     Command="{Binding AddNewClientCommand}"/>
             <Button Content="Kunde bearbeiten" 
-                    Command="{Binding ChangeClientCommand}"/>
+                    Command="{Binding ChangeClientCommand}"
+                    CommandParameter="{Binding ElementName=dataGridView,Path=SelectedItem}"/>
             <Button Content="Kunde löschen" 
-                    Command="{Binding DeleteClientCommand}"/>
+                    Command="{Binding DeleteClientCommand}"
+                    CommandParameter="{Binding ElementName=dataGridView,Path=SelectedItem}"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

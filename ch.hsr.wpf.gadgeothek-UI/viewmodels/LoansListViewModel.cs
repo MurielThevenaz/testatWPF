@@ -1,5 +1,6 @@
 ﻿using ch.hsr.wpf.gadgeothek.domain;
 using ch.hsr.wpf.gadgeothek_UI.services;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
 {
-    public class LoansListViewModel: INotifyPropertyChanged
+    public class LoansListViewModel: BindableBase
     {
         public AppViewModel AppViewModel;
 
@@ -20,12 +21,9 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
             get { return _allLoans; }
             set
             {
-                _allLoans = value;
-                OnPropertyChanged(nameof(AllLoans));
+                SetProperty(ref _allLoans, value, nameof(AllLoans));
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public RelayCommand AddNewLoanCommand { get; set; }
         public RelayCommand ChangeLoanCommand { get; set; }
@@ -33,12 +31,6 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
 
         public LoansListViewModel()
         {
-        }
-
-
-        public virtual void OnPropertyChanged(string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public void PullAllLoans()

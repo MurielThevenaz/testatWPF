@@ -43,6 +43,9 @@
     <Reference Include="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\PresentationFramework.4.6.0\lib\PresentationFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Prism, Version=7.2.0.708, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.7.2.0.708-pre\lib\net45\Prism.dll</HintPath>
+    </Reference>
     <Reference Include="Serilog, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\packages\Serilog.1.5.7\lib\net45\Serilog.dll</HintPath>
     </Reference>
@@ -111,6 +114,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="helpers\RelayCommand.cs" />
+    <Compile Include="helpers\RelayCommandWithParameter.cs" />
     <Compile Include="viewmodels\AppViewModel.cs" />
     <Compile Include="viewmodels\ClientsListViewModel.cs" />
     <Compile Include="viewmodels\GadgetsListViewModel.cs" />

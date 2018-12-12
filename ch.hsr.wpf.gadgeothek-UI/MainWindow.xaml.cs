@@ -1,7 +1,9 @@
-﻿using ch.hsr.wpf.gadgeothek_UI.services;
+﻿using ch.hsr.wpf.gadgeothek.service;
+using ch.hsr.wpf.gadgeothek_UI.services;
 using ch.hsr.wpf.gadgeothek_UI.viewmodels;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +24,12 @@ namespace ch.hsr.wpf.gadgeothek_UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private AppViewModel AppViewModel = new AppViewModel();
-
         public MainWindow()
         {
+            String ServerUrl = ConfigurationManager.AppSettings["server"].ToString();
+            LibraryAdminService Service = new LibraryAdminService(ServerUrl);
             InitializeComponent();
+            AppViewModel AppViewModel = new AppViewModel(Service);
             DataContext = AppViewModel;
 
             GadgetsListView.GadgetsListViewModel.AppViewModel = AppViewModel;

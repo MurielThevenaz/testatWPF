@@ -10,14 +10,6 @@
         Title="Kunde"
         SizeToContent="WidthAndHeight" 
         WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/views/styles/ButtonStyle.xaml"/>
-                <ResourceDictionary Source="/views/styles/EditEntryStyle.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
     <StackPanel>
         <DockPanel>
             <Label Content="Name" />

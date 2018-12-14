@@ -12,10 +12,6 @@
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/views/styles/ButtonStyle.xaml"/>
-                <ResourceDictionary Source="/views/styles/EditEntryStyle.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
             <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
                             ObjectType="{x:Type System:Enum}">
                 <ObjectDataProvider.MethodParameters>
@@ -39,7 +35,7 @@
         </DockPanel>
         <DockPanel>
             <Label Content="Preis" />
-            <TextBox Name="Price" Text="{Binding Price}" />
+            <TextBox Name="Price" Text="{Binding Price, StringFormat={}{0:C}}" />
         </DockPanel>
         <DockPanel>
             <Label Content="Zustand" />

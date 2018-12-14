@@ -36,8 +36,8 @@
             <TextBox Name="ReturnDate" Text="{Binding ReturnDate}" />
         </DockPanel>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Save"/>
-            <Button Content="Cancel"/>
+            <Button Content="Save" Click="ButtonSave_Click"/>
+            <Button Content="Cancel" IsCancel="True"/>
         </StackPanel>
     </StackPanel>
 </Window>

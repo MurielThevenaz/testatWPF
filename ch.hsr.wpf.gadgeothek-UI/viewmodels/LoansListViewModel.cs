@@ -74,6 +74,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
             }
             Loan editableLoan = new Loan
             {
+                Id = loan.Id,
                 CustomerId = loan.CustomerId,
                 GadgetId = loan.GadgetId,
                 PickupDate = loan.PickupDate,
@@ -83,6 +84,7 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
             EditLoanWindow EditLoanWindow = new EditLoanWindow(editableLoan);
             if (EditLoanWindow.ShowDialog() == true)
             {
+                loan.Id = editableLoan.Id;
                 loan.CustomerId = editableLoan.CustomerId;
                 loan.GadgetId = editableLoan.GadgetId;
                 loan.PickupDate = editableLoan.PickupDate;

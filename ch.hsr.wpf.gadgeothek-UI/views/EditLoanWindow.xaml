@@ -20,12 +20,15 @@
     </Window.Resources>
     <StackPanel>
         <DockPanel>
-            <Label Content="Kunde" />
-            <TextBox Name="Customer" Text="{Binding CustomerId}" /> 
-            
+            <Label Content="AusleihNr." />
+            <TextBox Name="Id" Text="{Binding Id}" />
         </DockPanel>
         <DockPanel>
-            <Label Content="Gadget" />
+            <Label Content="KundenNr." />
+            <TextBox Name="Customer" Text="{Binding CustomerId}" /> 
+        </DockPanel>
+        <DockPanel>
+            <Label Content="GadgetNr." />
             <TextBox Name="Gadget" Text="{Binding GadgetId}" />
         </DockPanel>
         <DockPanel>

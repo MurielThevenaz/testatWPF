@@ -21,12 +21,7 @@
     <StackPanel>
         <DockPanel>
             <Label Content="Kunde" />
-            <!--<ComboBox HorizontalAlignment="Left"    
-                  VerticalAlignment="Top"   
-                  Width="246"
-                  ItemsSource="{Binding AllLoans}"
-                  SelectedItem="{Binding SCustomer}"/>-->
-             <TextBox Name="Customer" Text="{Binding CustomerId}" /> 
+            <TextBox Name="Customer" Text="{Binding CustomerId}" /> 
             
         </DockPanel>
         <DockPanel>

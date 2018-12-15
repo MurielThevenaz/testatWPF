@@ -18,8 +18,10 @@
                       SelectionMode="Single"/>
         <StackPanel Orientation="Horizontal">
             <Button Content="Neuer Ausleihvorgang" Command="{Binding AddNewLoanCommand}"/>
-            <Button Content="Ausleihvorgang anpassen" Command="{Binding ChangeLoanCommand}"/>
-            <Button Content="Ausleihvorgang beenden" Command="{Binding EndLoanCommand}" />
+            <Button Content="Ausleihvorgang anpassen" Command="{Binding ChangeLoanCommand}"
+                    CommandParameter="{Binding ElementName=dataGridView,Path=SelectedItem}"/>
+            <Button Content="Ausleihvorgang beenden" Command="{Binding DeleteLoanCommand}"
+                    CommandParameter="{Binding ElementName=dataGridView,Path=SelectedItem}"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

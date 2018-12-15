@@ -12,12 +12,16 @@
         WindowStartupLocation="CenterScreen">
     <StackPanel>
         <DockPanel>
-            <Label Content="Kunde" />
-            <TextBox Name="Customer" Text="{Binding Customer}" />
+            <Label Content="AusleihNr." />
+            <TextBox Name="Id" Text="{Binding Id}" />
         </DockPanel>
         <DockPanel>
-            <Label Content="Gadget" />
-            <TextBox Name="Gadget" Text="{Binding Gadget}" />
+            <Label Content="KundenNr." />
+            <TextBox Name="Customer" Text="{Binding CustomerId}" /> 
+        </DockPanel>
+        <DockPanel>
+            <Label Content="GadgetNr." />
+            <TextBox Name="Gadget" Text="{Binding GadgetId}" />
         </DockPanel>
         <DockPanel>
             <Label Content="Abholdatum" />
@@ -28,8 +32,8 @@
             <TextBox Name="ReturnDate" Text="{Binding ReturnDate, StringFormat=d}" />
         </DockPanel>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Save"/>
-            <Button Content="Cancel"/>
+            <Button Content="Save" Click="ButtonSave_Click"/>
+            <Button Content="Cancel" IsCancel="True"/>
         </StackPanel>
     </StackPanel>
 </Window>

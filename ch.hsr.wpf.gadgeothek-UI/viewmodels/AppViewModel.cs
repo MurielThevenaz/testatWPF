@@ -51,5 +51,20 @@ namespace ch.hsr.wpf.gadgeothek_UI.viewmodels
         {
             return Service.DeleteCustomer(client);
         }
+
+        public bool AddLoan(Loan loan)
+        {
+            return Service.AddLoan(loan);
+        }
+
+        public bool UpdateLoan(Loan loan)
+        {
+            return Service.UpdateLoan(loan);
+        }
+
+        public bool DeleteLoan(Loan loan)
+        {
+            return Service.DeleteLoan(loan);
+        }
     }
 }

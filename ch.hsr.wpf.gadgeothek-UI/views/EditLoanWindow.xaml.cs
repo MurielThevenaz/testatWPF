@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ch.hsr.wpf.gadgeothek.domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,20 @@ namespace ch.hsr.wpf.gadgeothek_UI.views
     /// </summary>
     public partial class EditLoanWindow : Window
     {
-        public EditLoanWindow()
+        public EditLoanWindow(Loan loan)
         {
             InitializeComponent();
+            DataContext = loan;
+        }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            if (ReturnDate.Text == string.Empty)
+            {
+                MessageBox.Show("Füllen Sie bitte alle Felder");
+                return;
+            }
+            DialogResult = true;
         }
     }
 }

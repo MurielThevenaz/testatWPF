@@ -21,11 +21,17 @@
     <StackPanel>
         <DockPanel>
             <Label Content="Kunde" />
-            <TextBox Name="Customer" Text="{Binding Customer}" />
+            <!--<ComboBox HorizontalAlignment="Left"    
+                  VerticalAlignment="Top"   
+                  Width="246"
+                  ItemsSource="{Binding AllLoans}"
+                  SelectedItem="{Binding SCustomer}"/>-->
+             <TextBox Name="Customer" Text="{Binding CustomerId}" /> 
+            
         </DockPanel>
         <DockPanel>
             <Label Content="Gadget" />
-            <TextBox Name="Gadget" Text="{Binding Gadget}" />
+            <TextBox Name="Gadget" Text="{Binding GadgetId}" />
         </DockPanel>
         <DockPanel>
             <Label Content="Abholdatum" />
